@@ -3,6 +3,7 @@ import os
 import sys
 import hashlib
 import argparse
+from colorama import just_fix_windows_console
 
 # Розмір шматка: 100 МБ для прикладу. (10 * 1024 * 1024)
 KiBYTE = 1024
@@ -253,6 +254,8 @@ def validate_path(path):
         return {'type': 'text', 'path': path}
 
 # ----------------- ВИКОНАННЯ -----------------
+
+just_fix_windows_console()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
